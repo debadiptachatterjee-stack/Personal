@@ -1,0 +1,608 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Aarav Deshmukh</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,200..500&display=swap">
+<style>
+/* Layout: one long scroll over a living, fixed colour field. Glass panels refract it.
+   Memorable moment: the hero headline has a second, lit copy revealed through a glass lens that follows the cursor. */
+:root {
+  --bg: #050a11;
+  --ink: #eef3f8;
+  --ink-2: #a3b1c0;
+  --ink-3: #6f8094;
+  --hot: #f6d68a;
+  --b1: #2b62ff;
+  --b2: #14c4ae;
+  --b3: #f3c56b;
+  --b4: #5a3fe0;
+  --glass-a: rgba(255,255,255,.115);
+  --glass-b: rgba(255,255,255,.03);
+  --inset: rgba(4,10,18,.35);
+  --rim-a: rgba(255,255,255,.6);
+  --rim-b: rgba(255,255,255,.34);
+  --rim-mid: rgba(255,255,255,.05);
+  --edge-hi: rgba(255,255,255,.35);
+  --edge-lo: rgba(255,255,255,.06);
+  --glow: rgba(255,255,255,.05);
+  --shadow: rgba(0,0,0,.55);
+  --spec: rgba(255,255,255,.2);
+  --dots: rgba(255,255,255,.16);
+  --line: rgba(255,255,255,.14);
+  --btn-fg: #06101a;
+  --btn-bg: #eef3f8;
+  --font: "Hanken Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #e8eef4; --ink: #09141f; --ink-2: #364a5e; --ink-3: #5d7186; --hot: #1c47ff;
+    --b1: #7ea3ff; --b2: #5fdcc9; --b3: #ffd58a; --b4: #b7a6ff;
+    --glass-a: rgba(255,255,255,.62); --glass-b: rgba(255,255,255,.2);
+    --inset: rgba(255,255,255,.45);
+    --rim-a: rgba(255,255,255,1); --rim-b: rgba(255,255,255,.8); --rim-mid: rgba(255,255,255,.15);
+    --edge-hi: rgba(255,255,255,.95); --edge-lo: rgba(255,255,255,.3); --glow: rgba(255,255,255,.35);
+    --shadow: rgba(30,55,90,.28); --spec: rgba(255,255,255,.75);
+    --dots: rgba(9,20,31,.16); --line: rgba(9,20,31,.14);
+    --btn-fg: #f3f7fb; --btn-bg: #09141f;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #e8eef4; --ink: #09141f; --ink-2: #364a5e; --ink-3: #5d7186; --hot: #1c47ff;
+  --b1: #7ea3ff; --b2: #5fdcc9; --b3: #ffd58a; --b4: #b7a6ff;
+  --glass-a: rgba(255,255,255,.62); --glass-b: rgba(255,255,255,.2);
+  --inset: rgba(255,255,255,.45);
+  --rim-a: rgba(255,255,255,1); --rim-b: rgba(255,255,255,.8); --rim-mid: rgba(255,255,255,.15);
+  --edge-hi: rgba(255,255,255,.95); --edge-lo: rgba(255,255,255,.3); --glow: rgba(255,255,255,.35);
+  --shadow: rgba(30,55,90,.28); --spec: rgba(255,255,255,.75);
+  --dots: rgba(9,20,31,.16); --line: rgba(9,20,31,.14);
+  --btn-fg: #f3f7fb; --btn-bg: #09141f;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #050a11; --ink: #eef3f8; --ink-2: #a3b1c0; --ink-3: #6f8094; --hot: #f6d68a;
+  --b1: #2b62ff; --b2: #14c4ae; --b3: #f3c56b; --b4: #5a3fe0;
+  --glass-a: rgba(255,255,255,.115); --glass-b: rgba(255,255,255,.03);
+  --inset: rgba(4,10,18,.35);
+  --rim-a: rgba(255,255,255,.6); --rim-b: rgba(255,255,255,.34); --rim-mid: rgba(255,255,255,.05);
+  --edge-hi: rgba(255,255,255,.35); --edge-lo: rgba(255,255,255,.06); --glow: rgba(255,255,255,.05);
+  --shadow: rgba(0,0,0,.55); --spec: rgba(255,255,255,.2);
+  --dots: rgba(255,255,255,.16); --line: rgba(255,255,255,.14);
+  --btn-fg: #06101a; --btn-bg: #eef3f8;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  padding-block: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--hot); outline-offset: 3px; border-radius: 12px; }
+
+/* ---------- living backdrop ---------- */
+#field { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -3; display: block; }
+.dots {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background-image: radial-gradient(var(--dots) 1px, transparent 1.4px);
+  background-size: 30px 30px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 85%);
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 85%);
+}
+.grain {
+  position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ---------- liquid glass ---------- */
+.glass {
+  position: relative;
+  background: linear-gradient(140deg, var(--glass-a), var(--glass-b));
+  -webkit-backdrop-filter: blur(24px) saturate(1.9) brightness(1.06);
+  backdrop-filter: blur(24px) saturate(1.9) brightness(1.06);
+  box-shadow:
+    inset 0 1px 0 var(--edge-hi),
+    inset 0 -1px 0 var(--edge-lo),
+    inset 0 0 38px var(--glow),
+    0 30px 60px -28px var(--shadow);
+  isolation: isolate;
+}
+.glass::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(155deg, var(--rim-a), var(--rim-mid) 38%, transparent 58%, var(--rim-b));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  z-index: 2;
+}
+.glass::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 1;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--spec), transparent 62%);
+  opacity: 0; transition: opacity .35s ease;
+}
+.glass:hover::before { opacity: 1; }
+
+/* ---------- nav ---------- */
+.nav {
+  position: fixed; z-index: 40; left: 50%; transform: translateX(-50%);
+  top: calc(14px + env(safe-area-inset-top, 0px));
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px; border-radius: 999px; max-width: calc(100% - 24px);
+}
+.nav a, .nav button {
+  font: inherit; font-size: .88rem; font-weight: 500; color: var(--ink-2);
+  padding: 8px 14px; border-radius: 999px; border: 0; background: transparent; cursor: pointer;
+  transition: color .2s, background .2s; position: relative; z-index: 3; white-space: nowrap;
+}
+.nav a:hover, .nav button:hover { color: var(--ink); background: var(--line); }
+.nav .mark { color: var(--ink); font-weight: 600; letter-spacing: -.01em; padding-right: 10px; }
+.nav .theme { width: 36px; height: 36px; padding: 0; display: grid; place-items: center; }
+.nav .theme svg { width: 17px; height: 17px; }
+@media (max-width: 560px) { .nav .hide-s { display: none; } }
+
+/* ---------- layout ---------- */
+.wrap { max-width: 1180px; margin: 0 auto; }
+section { position: relative; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 40px; }
+h2 {
+  margin: 0; font-weight: 200; font-size: clamp(2.1rem, 4.6vw, 3.7rem);
+  letter-spacing: -.035em; line-height: 1.02; text-wrap: balance;
+}
+.sec-head p { margin: 0; color: var(--ink-3); font-size: .95rem; max-width: 34ch; }
+
+/* ---------- hero ---------- */
+.hero { padding-top: clamp(120px, 20vh, 190px); padding-bottom: 90px; }
+.role { margin: 0 0 28px; color: var(--ink-2); font-size: 1rem; font-weight: 400; display: flex; align-items: center; gap: 12px; }
+.role::before { content: ""; width: 38px; height: 1px; background: var(--ink-3); }
+.title {
+  position: relative; margin: 0; font-weight: 200; letter-spacing: -.045em; line-height: .96;
+  font-size: clamp(2.5rem, 9.4vw, 8.6rem); --lx: 70%; --ly: 50%;
+}
+.title .layer { display: block; }
+.title .ln { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+.title .ln > span { display: block; animation: rise 1.1s cubic-bezier(.2,.8,.15,1) both; }
+.title .ln:nth-child(2) > span { animation-delay: .12s; }
+.title .ln:nth-child(3) > span { animation-delay: .24s; }
+.title .reveal {
+  position: absolute; inset: 0; color: var(--hot); pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle 112px at var(--lx) var(--ly), #000 62%, transparent 100%);
+  mask-image: radial-gradient(circle 112px at var(--lx) var(--ly), #000 62%, transparent 100%);
+}
+.lens {
+  position: absolute; left: 0; top: 0; width: 224px; height: 224px; margin: -112px 0 0 -112px;
+  border-radius: 50%; pointer-events: none; z-index: 3;
+  transform: translate(var(--lx), var(--ly));
+  background: radial-gradient(circle at 32% 26%, rgba(255,255,255,.22), rgba(255,255,255,.02) 46%, transparent 70%);
+  -webkit-backdrop-filter: blur(1.5px) saturate(1.7) brightness(1.08);
+  backdrop-filter: blur(1.5px) saturate(1.7) brightness(1.08);
+  box-shadow: inset 0 0 0 1px var(--rim-a), inset 0 -14px 30px -10px var(--rim-b), inset 0 18px 24px -14px var(--edge-hi), 0 24px 50px -20px var(--shadow);
+}
+@keyframes rise { from { transform: translateY(105%); } to { transform: translateY(0); } }
+
+.hero-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; margin-top: 56px; }
+.hero-foot .lede { margin: 0 0 26px; max-width: 46ch; font-size: 1.12rem; color: var(--ink-2); }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 999px;
+  font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; border: 0; color: var(--ink);
+  transition: transform .25s cubic-bezier(.2,.8,.2,1);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.solid { background: var(--btn-bg); color: var(--btn-fg); box-shadow: 0 14px 30px -14px var(--shadow); }
+.status { display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border-radius: 999px; font-size: .92rem; color: var(--ink-2); }
+.status .pip { width: 9px; height: 9px; border-radius: 50%; background: #3ee6a6; box-shadow: 0 0 0 0 rgba(62,230,166,.6); animation: pip 2.4s ease-out infinite; flex: none; position: relative; z-index: 3; }
+.status span { position: relative; z-index: 3; }
+@keyframes pip { 70% { box-shadow: 0 0 0 11px rgba(62,230,166,0); } 100% { box-shadow: 0 0 0 0 rgba(62,230,166,0); } }
+
+/* ---------- work ---------- */
+.work { padding: 90px 0; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 22px; }
+.card {
+  border-radius: 30px; padding: 14px 14px 26px; display: flex; flex-direction: column; gap: 22px; min-width: 0;
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.card:nth-child(1) { grid-column: span 7; }
+.card:nth-child(2) { grid-column: span 5; }
+.card:nth-child(3) { grid-column: span 5; }
+.card:nth-child(4) { grid-column: span 7; }
+.art { height: 250px; border-radius: 20px; background: var(--inset); overflow: hidden; position: relative; z-index: 3; }
+.card:nth-child(2) .art, .card:nth-child(3) .art { height: 220px; }
+.art svg { width: 100%; height: 100%; display: block; }
+.card .meta { padding: 0 12px; display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 3; }
+.card .top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.card h3 { margin: 0; font-weight: 300; font-size: 1.7rem; letter-spacing: -.03em; line-height: 1.1; }
+.card .yr { color: var(--ink-3); font-size: .9rem; font-variant-numeric: tabular-nums; flex: none; }
+.card p { margin: 0; color: var(--ink-2); max-width: 52ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.tags li { list-style: none; font-size: .8rem; color: var(--ink-2); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); }
+.tags { padding: 0; margin: 4px 0 0; }
+@media (max-width: 860px) { .card:nth-child(n) { grid-column: 1 / -1; } .art, .card:nth-child(n) .art { height: 210px; } }
+
+/* ---------- about ---------- */
+.about { padding: 90px 0; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.about .copy p { margin: 0 0 20px; color: var(--ink-2); font-size: 1.12rem; max-width: 58ch; }
+.about .copy p:first-child { color: var(--ink); font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 300; letter-spacing: -.02em; line-height: 1.3; }
+.skills { border-radius: 30px; padding: 12px; display: grid; gap: 10px; }
+.skills .grp { position: relative; z-index: 3; border-radius: 20px; background: var(--inset); padding: 20px 22px; }
+.skills h4 { margin: 0 0 10px; font-weight: 500; font-size: .95rem; color: var(--ink); }
+.skills ul { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.skills li { list-style: none; color: var(--ink-2); font-size: .95rem; }
+@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+/* ---------- experience ---------- */
+.exp { padding: 90px 0; }
+.rail { position: relative; display: grid; gap: 14px; padding-left: 34px; }
+.rail::before { content: ""; position: absolute; left: 9px; top: 18px; bottom: 18px; width: 1px; background: linear-gradient(var(--line), var(--ink-3), var(--line)); }
+.job { border-radius: 24px; padding: 24px 28px; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 6px 28px; }
+.job::marker { content: none; }
+.job .dot { position: absolute; left: -33px; top: 30px; width: 11px; height: 11px; border-radius: 50%; background: var(--hot); box-shadow: 0 0 0 5px var(--bg), 0 0 18px var(--hot); z-index: 3; }
+.job time { color: var(--ink-3); font-size: .92rem; font-variant-numeric: tabular-nums; position: relative; z-index: 3; padding-top: 3px; }
+.job div { position: relative; z-index: 3; min-width: 0; }
+.job h3 { margin: 0 0 4px; font-weight: 400; font-size: 1.3rem; letter-spacing: -.02em; }
+.job p { margin: 0; color: var(--ink-2); max-width: 62ch; }
+@media (max-width: 640px) { .job { grid-template-columns: 1fr; padding: 22px; } .rail { padding-left: 28px; } .job .dot { left: -27px; } }
+
+/* ---------- contact ---------- */
+.contact { padding: 90px 0 56px; }
+.cta { border-radius: 40px; padding: clamp(32px, 6vw, 76px); display: grid; gap: 30px; }
+.cta > * { position: relative; z-index: 3; }
+.cta h2 { font-size: clamp(2.2rem, 6vw, 5.2rem); max-width: 14ch; }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.mail code { font-family: var(--font); font-size: clamp(1.15rem, 2.6vw, 1.7rem); font-weight: 300; letter-spacing: -.02em; overflow-wrap: anywhere; user-select: all; }
+.mail .btn { padding: 10px 20px; font-size: .88rem; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 26px; color: var(--ink-2); }
+.links a { border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: color .2s, border-color .2s; }
+.links a:hover { color: var(--ink); border-color: var(--ink-2); }
+footer { padding: 14px 0 44px; color: var(--ink-3); font-size: .86rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .title .ln > span { animation: none; }
+  .status .pip { animation: none; }
+  .card { transition: none; transform: none; }
+}
+</style>
+
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="dots" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav glass" aria-label="Primary">
+  <a class="mark" href="#top">Aarav D.</a>
+  <a class="hide-s" href="#work">Work</a>
+  <a class="hide-s" href="#about">About</a>
+  <a class="hide-s" href="#path">Path</a>
+  <a href="#contact">Contact</a>
+  <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+  </button>
+</nav>
+
+<main class="wrap" id="top">
+
+  <section class="hero" id="hero">
+    <p class="role">Product engineer and interface designer</p>
+    <h1 class="title" id="title" aria-label="I build software that feels effortless.">
+      <span class="layer base" aria-hidden="true">
+        <span class="ln"><span>I build software</span></span>
+        <span class="ln"><span>that feels</span></span>
+        <span class="ln"><span>effortless.</span></span>
+      </span>
+      <span class="layer reveal" aria-hidden="true">
+        <span class="ln"><span>I build software</span></span>
+        <span class="ln"><span>that feels</span></span>
+        <span class="ln"><span>effortless.</span></span>
+      </span>
+      <span class="lens" id="lens" aria-hidden="true"></span>
+    </h1>
+    <div class="hero-foot">
+      <div>
+        <p class="lede">Seven years shaping dashboards, design systems and mobile apps for teams that care how a product feels in the hand. I work from the first sketch through to the shipped build.</p>
+        <div class="btns">
+          <a class="btn solid" href="#work">See selected work</a>
+          <a class="btn glass" href="#contact"><span style="position:relative;z-index:3">Start a project</span></a>
+        </div>
+      </div>
+      <div class="status glass"><i class="pip"></i><span>Taking on projects from January 2027</span></div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>Four projects from the last three years, each one designed and built end to end.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card glass">
+        <div class="art">
+          <svg viewBox="0 0 560 250" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true">
+            <defs><linearGradient id="gw" x1="0" x2="1"><stop offset="0" stop-color="var(--b2)"/><stop offset="1" stop-color="var(--b1)"/></linearGradient></defs>
+            <g stroke="url(#gw)" stroke-width="1.6">
+              <path d="M-10 70 C 80 30, 150 120, 250 76 S 430 30, 570 80" opacity=".95"/>
+              <path d="M-10 96 C 80 56, 150 146, 250 102 S 430 56, 570 106" opacity=".8"/>
+              <path d="M-10 122 C 80 82, 150 172, 250 128 S 430 82, 570 132" opacity=".65"/>
+              <path d="M-10 148 C 80 108, 150 198, 250 154 S 430 108, 570 158" opacity=".5"/>
+              <path d="M-10 174 C 80 134, 150 224, 250 180 S 430 134, 570 184" opacity=".35"/>
+              <path d="M-10 200 C 80 160, 150 250, 250 206 S 430 160, 570 210" opacity=".2"/>
+            </g>
+            <line x1="352" y1="0" x2="352" y2="250" stroke="var(--hot)" stroke-width="1" stroke-dasharray="3 6" opacity=".8"/>
+            <circle cx="352" cy="82" r="5" fill="var(--hot)" stroke="none"/>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="top"><h3>Tidewell</h3><span class="yr">2026</span></div>
+          <p>A berth planning dashboard for coastal ports. It reads tide tables and vessel drafts together, so schedulers see which ships can dock at 06:40 before they ask.</p>
+          <ul class="tags"><li>Product design</li><li>React</li><li>Mapbox</li><li>PostgreSQL</li></ul>
+        </div>
+      </article>
+
+      <article class="card glass">
+        <div class="art">
+          <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g transform="translate(200 112)">
+              <rect x="-82" y="-84" width="150" height="176" rx="12" transform="rotate(-9)" fill="var(--b1)" opacity=".28"/>
+              <rect x="-76" y="-88" width="150" height="176" rx="12" transform="rotate(-3)" fill="var(--b2)" opacity=".3"/>
+              <rect x="-70" y="-92" width="150" height="176" rx="12" transform="rotate(4)" fill="var(--glass-a)" stroke="var(--rim-a)" stroke-width="1"/>
+              <g transform="rotate(4)" fill="var(--ink)" opacity=".7">
+                <rect x="-50" y="-66" width="86" height="6" rx="3"/>
+                <rect x="-50" y="-48" width="110" height="3" rx="1.5" opacity=".5"/>
+                <rect x="-50" y="-38" width="104" height="3" rx="1.5" opacity=".5"/>
+                <rect x="-50" y="-28" width="110" height="3" rx="1.5" opacity=".5"/>
+                <rect x="-50" y="-18" width="72" height="3" rx="1.5" opacity=".5"/>
+                <rect x="-50" y="2" width="110" height="3" rx="1.5" opacity=".5"/>
+                <rect x="-50" y="12" width="98" height="3" rx="1.5" opacity=".5"/>
+                <rect x="-50" y="22" width="108" height="3" rx="1.5" opacity=".5"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="top"><h3>Paperlight</h3><span class="yr">2025</span></div>
+          <p>A reading app for long PDFs on phones. Text reflows around figures and warms toward evening, which cut session drop-off by a third in beta.</p>
+          <ul class="tags"><li>iOS</li><li>Swift</li><li>Typography</li></ul>
+        </div>
+      </article>
+
+      <article class="card glass">
+        <div class="art">
+          <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g>
+              <rect x="40" y="34" width="70" height="70" rx="14" fill="var(--b1)"/>
+              <rect x="120" y="34" width="70" height="70" rx="14" fill="var(--b2)"/>
+              <rect x="200" y="34" width="70" height="70" rx="14" fill="var(--b3)"/>
+              <rect x="280" y="34" width="70" height="70" rx="14" fill="var(--b4)"/>
+              <rect x="40" y="114" width="70" height="70" rx="14" fill="var(--b1)" opacity=".55"/>
+              <rect x="120" y="114" width="70" height="70" rx="14" fill="var(--b2)" opacity=".55"/>
+              <rect x="200" y="114" width="70" height="70" rx="14" fill="var(--b3)" opacity=".55"/>
+              <rect x="280" y="114" width="70" height="70" rx="14" fill="var(--b4)" opacity=".55"/>
+            </g>
+            <rect x="120" y="34" width="70" height="150" rx="14" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="4 5" opacity=".7"/>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="top"><h3>Kiln</h3><span class="yr">2025</span></div>
+          <p>An open source compiler that turns one set of design tokens into CSS, Swift and Kotlin. Used by eleven teams, and the build takes under a second.</p>
+          <ul class="tags"><li>TypeScript</li><li>Design systems</li><li>Open source</li></ul>
+        </div>
+      </article>
+
+      <article class="card glass">
+        <div class="art">
+          <svg viewBox="0 0 560 250" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" aria-hidden="true">
+            <g stroke="var(--ink)" stroke-width="1" transform="translate(280 125)">
+              <circle r="30" opacity=".95"/><circle r="52" opacity=".75"/><circle r="76" opacity=".55"/>
+              <circle r="102" opacity=".38"/><circle r="130" opacity=".24"/><circle r="160" opacity=".14"/>
+              <path d="M-280 38 L 280 -38" stroke="var(--hot)" stroke-width="1.4"/>
+              <circle cx="-52" cy="7" r="5" fill="var(--hot)" stroke="none"/>
+              <circle cx="102" cy="-13" r="5" fill="var(--b2)" stroke="none"/>
+            </g>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="top"><h3>Meridian</h3><span class="yr">2024</span></div>
+          <p>A scheduling tool for distributed teams. It shows the three hours each time zone can actually meet, and offers to move the meeting when nobody can.</p>
+          <ul class="tags"><li>Product design</li><li>Next.js</li><li>Calendar APIs</li></ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="copy">
+        <h2 style="margin-bottom:34px">How I work</h2>
+        <p>I start with the smallest version that proves the idea, then spend the remaining time on the details people feel but cannot name: spacing, easing, the pause before a screen loads.</p>
+        <p>I design in the browser and write production code, so what you approve is what ships. No hand-off gap, no lost intent.</p>
+        <p>Outside client work I maintain Kiln, write about interface craft, and photograph architecture on weekends.</p>
+      </div>
+      <div class="skills glass">
+        <div class="grp"><h4>Design</h4><ul><li>Product strategy</li><li>Interface design</li><li>Design systems</li><li>Motion</li><li>Prototyping</li></ul></div>
+        <div class="grp"><h4>Engineering</h4><ul><li>TypeScript</li><li>React</li><li>Swift</li><li>WebGL</li><li>Node</li><li>PostgreSQL</li></ul></div>
+        <div class="grp"><h4>Working together</h4><ul><li>Fixed-scope projects</li><li>Embedded with your team</li><li>Design and code reviews</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp" id="path">
+    <div class="sec-head">
+      <h2>Where I have worked</h2>
+      <p>Newest first.</p>
+    </div>
+    <div class="rail">
+      <div class="job glass"><i class="dot"></i><time>2024 to now</time><div><h3>Independent</h3><p>Product design and engineering for logistics, reading and developer tools companies. Tidewell, Meridian and Kiln came out of this work.</p></div></div>
+      <div class="job glass"><i class="dot"></i><time>2021 to 2024</time><div><h3>Lead product engineer, Northwind Labs</h3><p>Led a team of six rebuilding the customer app, then the design system behind it. Page load fell from 4.1 seconds to 1.2.</p></div></div>
+      <div class="job glass"><i class="dot"></i><time>2019 to 2021</time><div><h3>Frontend engineer, Cobalt Studio</h3><p>Shipped campaign sites and interactive launches for consumer brands, with a focus on animation and performance.</p></div></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="cta glass">
+      <h2>Have something worth building?</h2>
+      <div class="mail">
+        <code id="addr">hello@aarav.design</code>
+        <button class="btn glass" id="copy" type="button"><span style="position:relative;z-index:3" id="copyl">Copy address</span></button>
+      </div>
+      <div class="links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://read.cv/" target="_blank" rel="noopener">Read.cv</a>
+        <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Aarav Deshmukh</span>
+    <span>Designed and built by hand, 2026</span>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+
+  /* ---------- colour field ---------- */
+  var cv = document.getElementById('field'), cx = cv.getContext('2d');
+  var S = 0.5, W = 0, H = 0, colors = [], bg = '#000', light = false;
+  var blobs = [
+    { c: 0, x: .18, y: .22, r: .62, fx: .00021, fy: .00017, ph: 0.0, par: .20, a: 1 },
+    { c: 1, x: .82, y: .34, r: .55, fx: .00017, fy: .00023, ph: 1.9, par: .34, a: .9 },
+    { c: 2, x: .55, y: .82, r: .46, fx: .00025, fy: .00014, ph: 3.4, par: .12, a: .55 },
+    { c: 3, x: .30, y: .70, r: .5,  fx: .00013, fy: .00019, ph: 5.1, par: .27, a: .8 }
+  ];
+  function hex(v) {
+    v = v.trim().replace('#', '');
+    if (v.length === 3) v = v.replace(/./g, '$&$&');
+    return [parseInt(v.slice(0, 2), 16), parseInt(v.slice(2, 4), 16), parseInt(v.slice(4, 6), 16)];
+  }
+  function readColors() {
+    var cs = getComputedStyle(root);
+    colors = ['--b1', '--b2', '--b3', '--b4'].map(function (k) { return hex(cs.getPropertyValue(k)); });
+    bg = cs.getPropertyValue('--bg').trim();
+    light = (cs.colorScheme || '').indexOf('light') === 0 && cs.colorScheme.indexOf('dark') === -1;
+    if (!reduce) return;
+    draw(0);
+  }
+  function size() {
+    W = cv.width = Math.max(2, Math.round(window.innerWidth * S));
+    H = cv.height = Math.max(2, Math.round(window.innerHeight * S));
+    draw(performance.now());
+  }
+  function draw(t) {
+    cx.globalCompositeOperation = 'source-over';
+    cx.globalAlpha = 1;
+    cx.fillStyle = bg;
+    cx.fillRect(0, 0, W, H);
+    cx.globalCompositeOperation = light ? 'source-over' : 'lighter';
+    var sy = (window.scrollY || 0) * S;
+    for (var i = 0; i < blobs.length; i++) {
+      var b = blobs[i], c = colors[b.c]; if (!c) continue;
+      var x = W * (b.x + .15 * Math.sin(t * b.fx + b.ph));
+      var y = H * (b.y + .13 * Math.cos(t * b.fy + b.ph * 1.7)) - sy * b.par;
+      var r = Math.max(W, H) * b.r;
+      var g = cx.createRadialGradient(x, y, 0, x, y, r);
+      var al = (light ? .62 : .46) * b.a;
+      g.addColorStop(0, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + al + ')');
+      g.addColorStop(1, 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',0)');
+      cx.fillStyle = g;
+      cx.fillRect(0, 0, W, H);
+    }
+  }
+  function loop(t) { draw(t); requestAnimationFrame(loop); }
+  window.addEventListener('resize', size);
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () { readColors(); });
+  readColors(); size();
+  if (!reduce) requestAnimationFrame(loop);
+  else window.addEventListener('scroll', function () { draw(0); }, { passive: true });
+
+  /* ---------- theme toggle ---------- */
+  document.getElementById('theme').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    root.setAttribute('data-theme', cur === 'light' ? 'dark' : 'light');
+    readColors();
+  });
+
+  /* ---------- glass specular + card tilt ---------- */
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  document.querySelectorAll('.glass').forEach(function (el) {
+    el.addEventListener('pointermove', function (e) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      if (fine && !reduce && el.classList.contains('card')) {
+        var px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+        el.style.setProperty('--ry', (px * 5).toFixed(2) + 'deg');
+        el.style.setProperty('--rx', (-py * 5).toFixed(2) + 'deg');
+      }
+    });
+    el.addEventListener('pointerleave', function () {
+      el.style.removeProperty('--rx'); el.style.removeProperty('--ry');
+    });
+  });
+
+  /* ---------- hero lens ---------- */
+  var hero = document.getElementById('hero'), title = document.getElementById('title');
+  var px = null, py = null, cxp = 0, cyp = 0, started = false, inside = false;
+  hero.addEventListener('pointermove', function (e) {
+    if (e.pointerType === 'touch') return;
+    var r = title.getBoundingClientRect();
+    px = e.clientX - r.left; py = e.clientY - r.top; inside = true;
+  });
+  hero.addEventListener('pointerleave', function () { inside = false; });
+  function setLens(x, y) {
+    title.style.setProperty('--lx', x.toFixed(1) + 'px');
+    title.style.setProperty('--ly', y.toFixed(1) + 'px');
+  }
+  function lensLoop(t) {
+    var r = title.getBoundingClientRect(), tx, ty;
+    if (inside && px !== null) { tx = px; ty = py; }
+    else {
+      tx = r.width * (.5 + .34 * Math.sin(t * .00042));
+      ty = r.height * (.5 + .3 * Math.sin(t * .00031 + 1.3));
+    }
+    if (!started) { cxp = tx; cyp = ty; started = true; }
+    cxp += (tx - cxp) * (inside ? .16 : .045);
+    cyp += (ty - cyp) * (inside ? .16 : .045);
+    setLens(cxp, cyp);
+    requestAnimationFrame(lensLoop);
+  }
+  if (reduce) { var r0 = title.getBoundingClientRect(); setLens(r0.width * .68, r0.height * .5); }
+  else requestAnimationFrame(lensLoop);
+
+  /* ---------- copy email ---------- */
+  var copyBtn = document.getElementById('copy'), lab = document.getElementById('copyl'), addr = document.getElementById('addr');
+  copyBtn.addEventListener('click', function () {
+    function done(ok) {
+      lab.textContent = ok ? 'Copied' : 'Press Ctrl+C to copy';
+      setTimeout(function () { lab.textContent = 'Copy address'; }, 2000);
+    }
+    function fallback() {
+      var rg = document.createRange(); rg.selectNodeContents(addr);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(rg); done(false);
+    }
+    try {
+      navigator.clipboard.writeText(addr.textContent).then(function () { done(true); }, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>
