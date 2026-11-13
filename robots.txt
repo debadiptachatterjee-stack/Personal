@@ -1,0 +1,19 @@
+# Allow standard search engines (Google Search, AI Overviews)
+User-agent: *
+Allow: /
+
+# Allow Google's Gemini models (Training and Grounding)
+User-agent: Google-Extended
+Allow: /
+
+# Allow OpenAI (ChatGPT search and training)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Allow Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
